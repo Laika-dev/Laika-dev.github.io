@@ -1,0 +1,81 @@
+/*
+ CSS for the main interaction
+*/
+.accordion > input[type='checkbox'] {
+	position: absolute;
+	left: -100vw;
+}
+
+.accordion .content {
+	overflow-y: hidden;
+	height: 0;
+	transition: height 0.3s ease;
+}
+
+.accordion > input[type='checkbox']:checked ~ .content {
+	height: auto;
+	overflow: visible;
+}
+
+.accordion label {
+	display: block;
+}
+
+/*
+   Styling
+  */
+body {
+	font: 14px/1.5em 'Overpass', 'Open Sans', Helvetica, sans-serif;
+	color: #a2a3a5;
+	font-weight: 300;
+	padding: 15px;
+	background-color: #242323;
+}
+
+.accordion {
+	margin-bottom: 0.2em;
+}
+
+.accordion > input[type='checkbox']:checked ~ .content {
+	padding: 10px;
+	border: 1px solid #444444;
+
+	border-top: 0;
+}
+
+.accordion .handle {
+	margin: 0;
+	font-size: 1em;
+	line-height: 0.1em;
+}
+
+.accordion label {
+	color: #ece7e7;
+	cursor: pointer;
+	font-weight: normal;
+	padding: 12px;
+	background: #424141;
+}
+
+.accordion label:hover,
+.accordion label:focus {
+	background: #646464;
+}
+
+.accordion .handle label:before {
+	content: '>';
+	display: inline-block;
+	margin-right: 10px;
+	font-size: 0.65em;
+	line-height: 0.5em;
+	vertical-align: middle;
+}
+
+.accordion > input[type='checkbox']:checked ~ .handle label:before {
+	content: '>';
+}
+
+b,
+strong {
+	font-weight: bold;
+}
