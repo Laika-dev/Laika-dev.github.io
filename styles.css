@@ -63,16 +63,16 @@ body {
 }
 
 .accordion .handle label:before {
-	content: '>';
+	content: '+';
 	display: inline-block;
 	margin-right: 10px;
-	font-size: 0.65em;
+	font-size: 1em;
 	line-height: 0.5em;
 	vertical-align: middle;
 }
 
 .accordion > input[type='checkbox']:checked ~ .handle label:before {
-	content: '>';
+	content: '-';
 }
 
 b,
